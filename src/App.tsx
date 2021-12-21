@@ -1,57 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useState } from "react";
+import { ProductList } from "./components/product-list";
+import { AddProductForm } from "./components/add-product-form";
+
+import styles from "./App.module.css";
 
 function App() {
+  const [isAddProductFormVisible, setIsAddProductFormVisible] =
+    useState<boolean>(false);
+
+  const onAddClick = () => {
+    setIsAddProductFormVisible(true);
+  };
+
+  const onAddProductCallback = () => {
+    setIsAddProductFormVisible(false);
+  };
+
+  const onAddProductClose = () => {
+    setIsAddProductFormVisible(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <main className={styles.wrapper}>
+      <h1 className={styles.title}>Shop App</h1>
+      <section className={styles.productList}>
+        <button className={styles.addButton} onClick={onAddClick}>
+          Add new product
+        </button>
+        <ProductList />
+      </section>
+      <AddProductForm
+        visible={isAddProductFormVisible}
+        onSubmitCallback={onAddProductCallback}
+        onClose={onAddProductClose}
+      />
+    </main>
   );
 }
 

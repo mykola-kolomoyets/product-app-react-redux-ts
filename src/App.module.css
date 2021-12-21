@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: calc(min(calc(100% - 32px), 736px));
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.title {
+  position: relative;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: calc(100%);
+  background-color: #000000;
+}
+
+.addButton {
+  position: relative;
+  border: 1px solid transparent;
+  background-color: #000000;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addButton:hover {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+}

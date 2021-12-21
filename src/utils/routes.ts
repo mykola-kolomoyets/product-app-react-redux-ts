@@ -1,0 +1,1 @@
+export const getProductsUrl = 'http://localhost:8000/products';

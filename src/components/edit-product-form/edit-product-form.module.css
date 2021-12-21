@@ -1,0 +1,31 @@
+.editForm {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 16px;
+}
+
+.buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.buttons button {
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.buttons button:hover {
+  background-color: rgb(112, 112, 112);
+  color: #ffffff;
+}

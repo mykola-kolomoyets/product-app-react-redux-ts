@@ -1,0 +1,45 @@
+.productItem {
+  border: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 150px;
+}
+
+.upPart {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.upPart img {
+  width: 64px;
+  height: 64px;
+  margin: 8px 0 0 8px;
+}
+
+@media screen and (max-width: 390px) {
+  .upPart img {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+.bottomPart {
+  margin: 0 8px 8px 8px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.bottomPart button {
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.bottomPart button:hover {
+  background-color: rgb(112, 112, 112);
+  color: #ffffff;
+}

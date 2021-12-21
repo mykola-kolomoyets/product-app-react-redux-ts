@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "https://media.cdnandroid.com/item_images/1073704/imagen-x-icon-changer-customize-app-icon-shortcut-0big.jpg",
+      "name": "Product name",
+      "count": 4,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 1,
+          "description": "some text here",
+          "date": "14:00 22.08.2021"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://media.cdnandroid.com/item_images/1073704/imagen-x-icon-changer-customize-app-icon-shortcut-0big.jpg",
+      "name": "Product name",
+      "count": 3,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 2,
+          "description": "some text here",
+          "date": "14:00 22.08.2021"
+        }
+      ]
+    }
+  ]
+}
